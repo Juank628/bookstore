@@ -1,11 +1,24 @@
 .mainContainer {
-    display: flex;
-    justify-content: space-around;
-    border: 1px solid gray;
-    padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid gray;
+  padding: 10px;
 }
 
 .linksContainer {
-    display: flex;
-    gap: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px
+}
+
+.progressCircle {
+  width: 100px;
+  height: 100px;
+  border: 6px solid blue;
+  border-radius: 100%;
 }

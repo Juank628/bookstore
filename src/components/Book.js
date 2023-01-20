@@ -24,8 +24,8 @@ const Book = ({ data }) => {
           </li>
         </ul>
       </div>
-      <div>
-        <div />
+      <div className={styles.progressContainer}>
+        <div className={styles.progressCircle} />
         <div>
           <p>64%</p>
           <p>Completed</p>
