@@ -1,5 +1,6 @@
 import React from 'react';
 import Book from '../components/Book';
+import AddForm from '../components/AddForm';
 import styles from './Books.module.css';
 
 const booksList = [
@@ -31,6 +32,7 @@ export default function Books() {
           <Book key={book.id} data={book} />
         ))}
       </ul>
+      <AddForm />
     </div>
   );
 }

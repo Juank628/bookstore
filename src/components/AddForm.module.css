@@ -1,0 +1,18 @@
+.formContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textInput {
+  width: 50%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.selectInput {
+  width: 20%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
