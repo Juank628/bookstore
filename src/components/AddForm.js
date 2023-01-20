@@ -6,11 +6,11 @@ export default function AddForm() {
     <section>
       <h2>ADD NEW BOOK</h2>
       <form className={styles.formContainer}>
-        <input className={styles.textInput} type="text" />
+        <input placeholder="Book title" className={styles.textInput} type="text" />
         <select className={styles.selectInput} name="" id="">
-          <option value="">Category 1</option>
+          <option value="">Action</option>
         </select>
-        <button type="button">ADD BOOK</button>
+        <button className={styles.addButton} type="button">ADD BOOK</button>
       </form>
     </section>
   );

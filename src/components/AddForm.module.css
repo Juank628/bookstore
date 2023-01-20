@@ -3,16 +3,22 @@
   justify-content: space-between;
 }
 
-.textInput {
-  width: 50%;
+.textInput,
+.selectInput,
+.addButton {
   height: 40px;
   border-radius: 5px;
   border: 1px solid gray;
 }
 
+.textInput {
+  width: 50%;
+}
+
 .selectInput {
   width: 20%;
-  height: 40px;
-  border-radius: 5px;
-  border: 1px solid gray;
+}
+
+.addButton {
+  width: 20%;
 }
