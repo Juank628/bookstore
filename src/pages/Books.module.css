@@ -1,0 +1,10 @@
+.mainContainer {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

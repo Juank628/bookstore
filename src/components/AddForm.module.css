@@ -1,0 +1,24 @@
+.formContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.textInput,
+.selectInput,
+.addButton {
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.textInput {
+  width: 50%;
+}
+
+.selectInput {
+  width: 20%;
+}
+
+.addButton {
+  width: 20%;
+}

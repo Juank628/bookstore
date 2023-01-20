@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.checkButton {
+  width: 20ch;
+  height: 50px;
+  background-color: gray;
+  font-size: 16px;
+  color: white;
+  border-radius: 10px;
+  border: 0;
+  margin-top: 20px;
+  cursor: pointer;
+}
