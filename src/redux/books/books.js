@@ -25,6 +25,12 @@ const initialState = {
 
 const booksReducer = (state = initialState, action = {}) => {
   switch (action.type) {
+    case ADD_BOOK:
+      return {
+        ...state,
+        list: [...state.list, action.book],
+      };
+
     default:
       return state;
   }
