@@ -9,11 +9,17 @@ export default function Books() {
 
   return (
     <div className={styles.mainContainer}>
-      <ul className={styles.listContainer}>
-        {list.map((book) => (
-          <Book key={book.id} data={book} />
-        ))}
-      </ul>
+      {list.length ? (
+        <>
+          <ul className={styles.listContainer}>
+            {list.map((book) => (
+              <Book key={book.id} data={book} />
+            ))}
+          </ul>
+        </>
+      ) : (
+        <h2 className={styles.emptyMessage}>The list is empty, please add a book</h2>
+      )}
       <AddForm />
     </div>
   );

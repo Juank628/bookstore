@@ -8,3 +8,11 @@
   flex-direction: column;
   gap: 20px;
 }
+
+.emptyMessage {
+  width: 100%;
+  text-align: center;
+  padding: 100px;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+}

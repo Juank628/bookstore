@@ -8,8 +8,8 @@ export default function AddForm() {
   const dispatch = useDispatch();
   const [bookData, setBookData] = useState({
     title: 'default',
-    author: 'anonymus',
-    category: 'action',
+    author: 'The best author',
+    category: 'Action',
   });
 
   const submitHandler = (e) => {
@@ -43,8 +43,8 @@ export default function AddForm() {
           onChange={changeHandler}
         />
         <select className={styles.selectInput} name="category" onChange={changeHandler}>
-          <option value="action">Action</option>
-          <option value="romance">Romance</option>
+          <option value="Action">Action</option>
+          <option value="Romance">Romance</option>
         </select>
         <button className={styles.addButton} type="submit">
           ADD BOOK
