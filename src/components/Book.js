@@ -1,10 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import booksReducer, { removeBook } from '../redux/books/books';
 import styles from './Book.module.css';
 
 const Book = ({ data }) => {
-  const { category, title, author } = data;
+  const {
+    id, category, title, author,
+  } = data;
+  const dispatch = useDispatch();
+
+  const deleteBook = (id) => {
+    dispatch(booksReducer(removeBook(id)));
+  };
 
   return (
     <li className={styles.mainContainer}>
@@ -17,7 +26,9 @@ const Book = ({ data }) => {
             <Link to="/#">Comments</Link>
           </li>
           <li>
-            <Link to="/#">Remove</Link>
+            <Link to="/#" onClick={() => deleteBook(id)}>
+              Remove
+            </Link>
           </li>
           <li>
             <Link to="/#">Edit</Link>
@@ -42,6 +53,7 @@ const Book = ({ data }) => {
 
 Book.propTypes = {
   data: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
