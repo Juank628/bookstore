@@ -2,7 +2,26 @@ const ADD_BOOK = 'books/ADD_BOOK';
 const REMOVE_BOOK = 'books/REMOVE_BOOK';
 
 const initialState = {
-  list: [],
+  list: [
+    {
+      id: '1',
+      title: 'The Treasure Island',
+      author: 'Robert Louis Stevenson',
+      category: 'Adventure',
+    },
+    {
+      id: '2',
+      title: 'The Dorian Gray Picture',
+      author: 'Oscar Wilde',
+      category: 'Drama',
+    },
+    {
+      id: '3',
+      title: 'Tom Sawyer',
+      author: 'Mark Twain',
+      category: 'Adventure',
+    },
+  ],
 };
 
 const booksReducer = (state = initialState, action = {}) => {
