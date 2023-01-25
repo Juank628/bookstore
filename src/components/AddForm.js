@@ -44,6 +44,8 @@ export default function AddForm() {
         />
         <select className={styles.selectInput} name="category" onChange={changeHandler}>
           <option value="Action">Action</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Drama">Drama</option>
           <option value="Romance">Romance</option>
         </select>
         <button className={styles.addButton} type="submit">
