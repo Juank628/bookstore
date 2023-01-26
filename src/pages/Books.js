@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { readBooks } from '../redux/books/books';
+import booksReducer, { readBooks } from '../redux/books/books';
 import Book from '../components/Book';
 import AddForm from '../components/AddForm';
 import styles from './Books.module.css';
@@ -10,7 +10,7 @@ export default function Books() {
   const { list } = useSelector((store) => store.books);
 
   useEffect(() => {
-    dispatch(readBooks());
+    dispatch(booksReducer(readBooks()));
   }, [dispatch]);
 
   return (
