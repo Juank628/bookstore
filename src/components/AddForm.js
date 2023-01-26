@@ -18,7 +18,7 @@ export default function AddForm() {
       booksReducer(
         addBook({
           ...bookData,
-          id: uuidv4(),
+          item_id: uuidv4(),
         }),
       ),
     );

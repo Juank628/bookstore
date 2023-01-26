@@ -5,14 +5,16 @@ import { useDispatch } from 'react-redux';
 import booksReducer, { removeBook } from '../redux/books/books';
 import styles from './Book.module.css';
 
+/* eslint camelcase: 0 */
 const Book = ({ data }) => {
   const {
-    id, category, title, author,
+    item_id, category, title, author,
   } = data;
   const dispatch = useDispatch();
 
-  const deleteBook = (id) => {
-    dispatch(booksReducer(removeBook(id)));
+  const deleteBook = (e, item_id) => {
+    e.preventDefault();
+    dispatch(booksReducer(removeBook(item_id)));
   };
 
   return (
@@ -26,7 +28,7 @@ const Book = ({ data }) => {
             <Link to="/#">Comments</Link>
           </li>
           <li>
-            <Link to="/#" onClick={() => deleteBook(id)}>
+            <Link to="/#" onClick={(e) => deleteBook(e, item_id)}>
               Remove
             </Link>
           </li>
@@ -53,7 +55,7 @@ const Book = ({ data }) => {
 
 Book.propTypes = {
   data: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,

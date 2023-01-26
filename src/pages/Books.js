@@ -1,11 +1,17 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { readBooks } from '../redux/books/books';
 import Book from '../components/Book';
 import AddForm from '../components/AddForm';
 import styles from './Books.module.css';
 
 export default function Books() {
+  const dispatch = useDispatch();
   const { list } = useSelector((store) => store.books);
+
+  useEffect(() => {
+    dispatch(readBooks());
+  }, [dispatch]);
 
   return (
     <div className={styles.mainContainer}>
@@ -13,7 +19,7 @@ export default function Books() {
         <>
           <ul className={styles.listContainer}>
             {list.map((book) => (
-              <Book key={book.id} data={book} />
+              <Book key={book.item_id} data={book} />
             ))}
           </ul>
         </>
