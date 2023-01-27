@@ -1,12 +1,14 @@
 .mainContainer {
-  max-width: 1000px;
+  padding: 4%;
   margin: auto;
+  background-color: var(--bg-color-2);
 }
 
 .listContainer {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin: 0;
 }
 
 .emptyMessage {

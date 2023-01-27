@@ -32,8 +32,8 @@ export default function AddForm() {
   };
 
   return (
-    <section>
-      <h2>ADD NEW BOOK</h2>
+    <section className={styles.mainContainer}>
+      <h2 className={styles.title}>ADD NEW BOOK</h2>
       <form className={styles.formContainer} onSubmit={submitHandler}>
         <input
           placeholder="Book title"

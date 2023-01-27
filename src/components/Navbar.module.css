@@ -1,12 +1,39 @@
-.container {
+.mainContainer {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
+  align-items: center;
+  padding: 25px 60px;
+  background-color: var(--bg-color-1);
+  border-bottom: 2px solid var(--bg-color-3);
+}
+
+.leftContainer {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.title {
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-size: 30px;
 }
 
 .linksList {
   display: flex;
   gap: 40px;
+  font-size: 14px;
+}
+
+.link {
+  color: var(--dark-color-2);
+  font-family: var(--primary-font);
+}
+
+.userIcon {
+  width: 40px;
+  border: 1px solid var(--dark-color-2);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
 }

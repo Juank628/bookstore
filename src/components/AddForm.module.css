@@ -1,6 +1,19 @@
+.mainContainer {
+  margin-top: 100px;
+  border-top: 2px solid var(--bg-color-3);
+  padding: 20px 5px;
+}
+
+.title {
+  font-family: var(--primary-font);
+  font-size: 20px;
+  color: var(--dark-color-2);
+}
+
 .formContainer {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .textInput,
@@ -8,7 +21,7 @@
 .addButton {
   height: 40px;
   border-radius: 5px;
-  border: 1px solid gray;
+  border: 1px solid var(--bg-color-3);
 }
 
 .textInput {
@@ -21,4 +34,9 @@
 
 .addButton {
   width: 20%;
+  background-color: var(--primary-color);
+  font-family: var(--secondary-font);
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
 }
