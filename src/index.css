@@ -1,3 +1,15 @@
+:root {
+  --primary-color: #0290ff;
+  --primary-variant-color: #307bbe;
+  --bg-color-1: #fff;
+  --bg-color-2: #fafafa;
+  --bg-color-3: #e7e7e9;
+  --dark-color-1: #121212;
+  --dark-color-2: #898989;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Roboto Slab", serif;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -20,5 +32,7 @@ a {
 
 body {
   margin: 0;
+  padding: 4%;
   font-family: Roboto, sans-serif;
+  background-color: var(--bg-color-3);
 }

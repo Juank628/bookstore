@@ -20,34 +20,34 @@ const Book = ({ data }) => {
   return (
     <li className={styles.mainContainer}>
       <div>
-        <p>{category}</p>
-        <p>{title}</p>
-        <p>{author}</p>
+        <p className={styles.category}>{category}</p>
+        <p className={styles.title}>{title}</p>
+        <p className={styles.author}>{author}</p>
         <ul className={styles.linksContainer}>
           <li>
-            <Link to="/#">Comments</Link>
+            <Link className={styles.link} to="/#">Comments</Link>
           </li>
           <li>
-            <Link to="/#" onClick={(e) => deleteBook(e, item_id)}>
+            <Link className={`${styles.link} ${styles.middleLink}`} to="/#" onClick={(e) => deleteBook(e, item_id)}>
               Remove
             </Link>
           </li>
           <li>
-            <Link to="/#">Edit</Link>
+            <Link className={styles.link} to="/#">Edit</Link>
           </li>
         </ul>
       </div>
       <div className={styles.progressContainer}>
         <div className={styles.progressCircle} />
         <div>
-          <p>64%</p>
-          <p>Completed</p>
+          <p className={styles.progressNumber}>64%</p>
+          <p className={styles.progressStatus}>Completed</p>
         </div>
       </div>
-      <div>
-        <p>CURRENT CHAPTER</p>
-        <p>Chapter 17</p>
-        <button type="button">UPDATE PROGRESS</button>
+      <div className={styles.chapterContainer}>
+        <p className={styles.currentChapter}>CURRENT CHAPTER</p>
+        <p className={styles.chapter}>Chapter 17</p>
+        <button className={styles.updateButton} type="button">UPDATE PROGRESS</button>
       </div>
     </li>
   );
